@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Encuesta de Salud</title>
+</head>
+<body>
+    <div class="formulario">
+         <div class="imagen">
+            <img src="img/salud.png" alt="Salud">
+        </div>
+        <h2> ENCUESTA DE SALUD ✍︎ </h2>
+       <br>
+        <form id="registrationForm">
+            <div class="caja">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre"  oninput="validateFullName(this)" placeholder="Ingrese su nombre" required title="Ingresa tu nombre">
+            </div>
+
+            <label>Edad: (1-100)</label>
+            <input type="number" min="1" max="100" placeholder="Edad" required >
+
+            <label>Tipo de Sangre:</label>
+            <select required>
+                <option value="">Selecciona</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+
+            </select>
+            <div class="range-container">
+                <label>Nivel de Dolor:</label>
+                <div class="slider-box">
+                    <input type="range" min="1" max="10" value="5" class="slider">
+                    <div class="numeros">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
+                </div>
+                <p class="texto-dolor">
+                    1 = Sin dolor | 10 = Mucho dolor
+                </p>
+            </div>
+            <button type="submit">
+                Enviar 
+            </button>
+               </form>
+    </div>
+    <script>
+              function validateFullName(input) {
+        input.value = input.value.replace(/[^A-Za-záéíóúÁÉÍÓÚñÑ\s]/g, '');
+        input.value = input.value.toUpperCase();
+     }
+
+
+    document.getElementById('registrationForm').onsubmit = function(event){
+    event.preventDefault();
+    alert('Encuesta enviada');
+    setTimeout(function(){
+        location.reload();
+    }, 2000);
+};
+    </script>
+</body>
+</html>
