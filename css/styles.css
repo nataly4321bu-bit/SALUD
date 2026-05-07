@@ -1,0 +1,139 @@
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#f4ffe5,#d8e4d5,#fff7e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.formulario{
+    width: 400px;
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(120,180,90,0.2);
+}
+
+h2{
+    text-align: center;
+    color: #6bbf59;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #5d7a4f;
+    font-weight: bold;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid #cdebbd;
+    outline: none;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background: #fbfff8;
+}
+
+input:focus,
+select:focus{
+    border-color: #8bcf72;
+    box-shadow: 0 0 10px rgba(139,207,114,0.3);
+}
+
+.range-container{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.slider-box{
+    background: #f5ffef;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.slider{
+    width: 100%;
+    appearance: none;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#c8f59f,#8bcf72,#6bbf59);
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #6bbf59;
+    cursor: pointer;
+}
+
+.numeros{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #6bbf59;
+}
+
+.texto-dolor{
+    margin-top: 15px;
+    font-size: 17px;
+    color: #5d7a4f;
+}
+
+button{
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(90deg,#8bcf72,#6bbf59);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(107,191,89,0.3);
+}
+
+.imagen{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.imagen img{
+    width: 400px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
